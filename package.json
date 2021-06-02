@@ -1,0 +1,57 @@
+{
+  "name": "buzzell.github.io",
+  "version": "1.0.0",
+  "description": "",
+  "dependencies": {
+    "jquery": "^3.6.0"
+  },
+  "devDependencies": {
+    "@babel/preset-env": "^7.14.2",
+    "autoprefixer": "^10.2.5",
+    "babel-loader": "^8.2.2",
+    "browser-sync": "^2.26.14",
+    "eslint": "^7.26.0",
+    "eslint-webpack-plugin": "^2.5.4",
+    "htmlnano": "^1.0.0",
+    "imagemin-cli": "^6.0.0",
+    "node-sass": "^6.0.0",
+    "npm-run-all": "^4.1.5",
+    "onchange": "^7.1.0",
+    "postcss": "^8.2.15",
+    "postcss-cli": "^8.3.1",
+    "postcss-loader": "^5.2.0",
+    "posthtml": "^0.15.2",
+    "posthtml-cli": "^0.9.2",
+    "posthtml-pug": "^1.0.2",
+    "stylelint": "^13.13.1",
+    "webpack": "^5.37.0",
+    "webpack-cli": "^4.7.0"
+  },
+  "scripts": {
+    "css:scss": "node-sass --output-style compressed -o dist src/scss",
+    "css:autoprefixer": "postcss -u autoprefixer -r dist/*.css",
+    "css:lint": "stylelint src/scss/*.scss --syntax scss || true",
+    "build:css": "npm run css:lint && npm run css:scss && npm run css:autoprefixer",
+    "watch:css": "onchange \"src/scss\" -- npm run build:css",
+    "build:img": "imagemin src/img/**/* --out-dir=dist/img",
+    "watch:img": "onchange \"src/img\" -- npm run build:img",
+    "build:js": "webpack --mode=production",
+    "watch:js": "onchange \"src/js\" -- webpack --mode=development",
+    "build:html": "posthtml -c .posthtmlrc.js",
+    "watch:html": "onchange \"src/views\" -- npm run build:html",
+    "serve": "browser-sync start --server \"dist\" --files \"dist\"",
+    "dev": "run-p serve watch:*",
+    "build": "run-p build:*"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/buzzell/buzzell.github.io.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/buzzell/buzzell.github.io/issues"
+  },
+  "homepage": "https://github.com/buzzell/buzzell.github.io#readme"
+}

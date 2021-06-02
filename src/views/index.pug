@@ -1,0 +1,128 @@
+doctype html
+html(lang="en")
+  head
+    meta(charset="utf-8")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    meta(http-equiv="X-UA-Compatible", content="ie=edge")
+    title= title
+    meta(name="description", content= description)
+    meta(property="og:title", content= title)
+    meta(property="og:description", content= description)
+    meta(property="og:image", content= social_img)
+    meta(property="og:url" content= url)
+    link(rel="icon", href=icon_32, sizes="32x32")
+    link(rel="stylesheet", href="https://fonts.googleapis.com/css2?family=Concert+One&family=Open+Sans:wght@400;700&display=swap")
+    link(rel="stylesheet", href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css", integrity="sha512-NhSC1YmyruXifcj/KFRWoC561YpHpc5Jtzgvbuzx5VozKpWvQ+4nXhPdFgmx8xqexRcpAglTj9sIBWINXa8x5w==", crossorigin="anonymous")
+    link(rel="stylesheet", href="/main.css")
+  body
+    section#home
+      .navBox
+        .navInner
+          a.logo(title="Home" href="#home")
+            img(src="/img/logo_light.png")
+          nav
+            a(class="about", href="#about") About
+            a(class="work", href="#work") Work
+            a(class="contact", href="#contact") Contact
+      .rocket.bounce
+        .body
+          .window
+            .shadow
+            img(src='/img/me.png')
+          .name Justin Buzzell
+          .title Front end Developer
+          .webLinks
+            a(href='mailto:justin@buzzell.me' target='_blank')
+              img(src='/img/mail.png')
+            a(href='https://github.com/buzzell' target='_blank')
+              img(src='/img/github.png')
+            a(href='https://www.linkedin.com/in/buzzell' target='_blank')
+              img(src='/img/linkedin.png')
+            a.galileo(href='https://youtu.be/s3RNsZvdYZQ' target='_blank')
+              img(src='/img/galileo.png')
+        .exhaust-flame
+          .inner-flame
+        .fin.fin-left
+        .fin.fin-right
+      .earth
+        img(alt="Earth with technolgoy icons", src="/img/earth.png")
+      .sky(aria-hidden="true")
+        .star(style="top: 40%; left: 58%")
+    section#about
+      .cover
+        .credit asdfasdf
+      .about-inner
+        .oregon
+          img(src="/img/oregon.png")
+        .about-me
+          p I'm Justin Buzzell, a freelance web developer.
+
+          p I love building sites and bringing someone's idea to life, giving it a place to live on the internet. I'm primarily a front-end developer, but my knowledge of NodeJS, SQL, and APIs allow me to create fully functional web apps.
+
+          p 
+            | I'm currently available for work, if you're interested in building something together, 
+            a(href="#contact") contact me.
+    section#work
+      #work-inner
+        h1 Work I've Done
+        .work
+          .work-snap
+            img(src="/img/talleyho_snap.png", alt="Snapshot of Talley Ho Inn website")
+          .work-info
+            h2.name Talley Ho Inn
+            a.link(href="http://talleyhoinn.com/", target="_blank") Visit Site
+            .logo
+              img(src="/img/talleyho_logo.png", alt="Logo for Talley Ho Inn")
+            .details 
+              span.design Web Design 
+              span.dev Development
+        .work
+          .work-snap
+            img(src="/img/roadrunner_snap.png", alt="Snapshot of Roadrunner Pizza website")
+          .work-info
+            h2.name Roadrunner Pizza
+            a.link(href="http://roadrunnerpizza.net/", target="_blank") Visit Site
+            .logo
+              img(src="/img/roadrunner_logo.png", alt="Logo for Roadrunner Pizza")
+            .details
+              span.dev Development
+        h1 Personal Projects
+        .work
+          .work-snap
+            img(src="/img/wpl_snap.png", alt="Snapshot of Watch Party Live website")
+          .work-info
+            h2.name Watch Party Live
+            a.link(href="https://watchparty.live/", target="_blank") Visit Site
+            .logo
+              img(src="/img/wpl_logo.png", alt="Logo for Watch Party Live")
+            .details
+              span.design Web Design
+              span.logod Logo Design
+              span.dev Development
+        .work
+          .work-snap
+            img(src="/img/birdlaw_snap.png", alt="Snapshot of Birdlaw website")
+          .work-info
+            h2.name Birdlaw
+            a.link(href="https://birdlaw.herokuapp.com/", target="_blank") Visit Site
+            .details
+              span.design Web Design
+              span.dev Development
+        .work
+          .work-snap
+            img(src="/img/stick_snap.png", alt="Snapshot of Stick Together website")
+          .work-info
+            h2.name Stick Together
+            a.link(href="https://stick-together.herokuapp.com/", target="_blank") Visit Site
+            .details
+              span.design Web Design
+              span.dev Development
+    section#contact
+      #clouds
+      #contact-box
+        a.email(href="mailto:justin@buzzell.me") justin@buzzell.me
+        a.git(href="https://github.com/buzzell") github.com/buzzell
+        a.linked(href="https://www.linkedin.com/in/buzzell") linkedin.com/in/buzzell
+      #land
+
+    script(src="/bundle.js")
